@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Lens Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <div class=""></div> -->
+    <div class="container">
+    <h1>Olive Shoots Order Form</h1>
+
+    <form name="submit-to-google-sheet">
+
+
+        <div class="d-flex flex-row justify-content-between mb-5">
+            <input class="col-lg-3" type="button" value="Only Solution" id="only-Solution">
+            <input name="Date" class="col-lg-3" type="date" required>
+        </div>
+        
+        <div class="row col-lg-12 flex-row justify-content-center">
+
+            <div class="col-lg-5">
+                <label for="lens-type">ECP Name :</label>
+                <input name="ECP Name" type="text" placeholder="Enter ECP Name" required !impotrant>
+                <br><br>
+            </div>
+            <div class="col-lg-5">
+                <label for="lens-type">Customer Order No :</label>
+                <input name="Customer Order No" type="text" placeholder="Customer Order No" required !important>
+                <br><br>
+            </div>
+        </div>
+            <div id="form-block">
+                <div class="row col-lg-12 flex-row justify-content-center">
+    <div class="col-lg-5">
+        <label for="lens-type">Lens Type:</label>
+        <select name="Lens Type" required value=""  selected id="lens-type" >
+            <option value="">Select Lens Type</option>
+            <option value="Daily Lenses">Daily Lenses</option>
+            <option value="Monthly Lenses">Monthly Lenses</option>
+        </select>
+        <br><br>
+    </div>
+    <div class="col-lg-5">
+        <label for="product-name">Product Name:</label>
+        <select name="Product Name" required  selected id="product-name" >
+            <option value="">Select Product Name</option>
+        </select>
+        <br><br>
+    </div>
+</div>
+
+<div class="d-flex mx-4 col-lg-12 justify-content-around">
+    <div class="col-lg-3" id="notToric">
+        <label for="power-range">Power Range:</label>
+        <select name="Power Range" required value="0"  selected id="power-range">
+        <option value="">Select Power Range</option>
+        </select>
+        <br><br>
+    </div>
+    <div class="col-lg-3">
+        <label for="color-available">Colors Available:</label>
+        <select name="Color" required   selected id="color-available">
+        <option value="">Select Color Available</option>
+        </select>
+        <br><br>
+    </div>
+    <div class="col-lg-3">
+        <label for="Solution">Lens Quantity :</label><br>
+        <!-- <input type="checkbox" id="checkbox1" value="Lens Quantity" required> -->
+        <input name="Lens Quantity" type="number" min="0" value="0" max="99"  id="input-field1" required>
+        <br><br>
+        </div>
+</div>
+
+    <!-- toric block starts -->
+    <div class="row col-lg-12 my-3 mx-1 flex-row justify-content-center" id="toric-block" style=" display: none !important;">
+        <div class="col-lg-10 my-2" style="font-size: 25px;font-weight: 600;">This Block is only for Toric</div>
+    <div class="col-lg-10 ">
+        <table>
+            <tr>
+            <th>Spherical</th>
+            <th>Steps</th>
+            <th>Cylindrical</th>
+            <th>Steps</th>
+            <th>Axis</th>
+            </tr>
+            <tr>
+                <td>Plano to -6.00</td>
+                <td>0.25D</td>
+                <td>-0.75 to -2.25</td>
+                <td>0.50D</td>
+                <td>10° to 180°</td>
+            </tr>
+            <tr>
+                <td>-6.50 to -6.00</td>
+                <td>0.50D</td>
+                <td>-0.75 to -2.25</td>
+                <td>0.50D</td>
+                <td>10° to 180°</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="d-flex my-4 col-lg-10 justify-content-around">
+        <div class="d-flex flex-column ">
+            <label for="Left-Eye-Power">Left Eye Power Range</label>
+        <div class="d-flex " id="Left-Eye">
+            <input  id="toric1" min="-20" name="Left SPH" type="number" step="0.25" id="Left-SPH" placeholder="L-SPH"  disabled>
+            <input   id="toric2" min="-20" name="Left CYL" type="number" step="0.25" id="Left-CYL" placeholder="L-CYL"  disabled>
+            <input  id="toric3" min="0" name="Left Axis" type="number" step="10" id="Left-Axis" placeholder="L-Axis"  disabled>
+        </div>
+    </div>
+    <div class="d-flex flex-column ">
+        <label for="Right-Eye-Power">Right Eye Power Range</label>
+        <div class="d-flex " id="Right-Eye">
+            <input  id="toric4" min="-20" name="Right SPH" type="number" step="0.25" id="Right-SPH" placeholder="R-SPH"  disabled>
+            <input  id="toric5" min="-20" name="Right CYL" type="number" step="0.25" id="Right-CYL" placeholder="R-CYL"  disabled>
+            <input  id="toric6" min="0" name="Right Axis" type="number" step="10" id="Right-Axis" placeholder="R-Axis"  disabled>
+        </div>
+    </div>
+    </div>
+    <div class="col-lg-10 d-flex justify-content-between mb-3" id="toricCount">
+        <div class="d-flex mx-4 flex-column">
+            <label for="Left-Count">Left Lens Count</label>
+        <input  id="toric7"  name="Left Count" type="number" min="0" value="0" max="99"  id="input-field3" placeholder="L-Count" required disabled>
+    </div>
+    <div class="d-flex flex-column">
+        <label for="Right-Count">Right Lens Count</label>
+        <input  id="toric8"  name="Right Count" type="number" min="0" value="0" max="99"  id="input-field4" placeholder="L-Count" required disabled>
+    </div>
+    </div>
+</div>
+
+    <!-- toric block ends -->
+
+
+    <div class="row col-lg-12 flex-row justify-content-center">
+    <div class="col-lg-5">
+        <label for="color-available">Mode Of Billing</label>
+        <select name="Mode of Billing" required  value=""  selected id="mode-of-billing">
+        <option value="">Select Mode Of Billing</option>
+        </select>
+        <br><br>
+    </div>
+    <div class="col-lg-5">
+        <label for="color-available">Mode Of Payment</label>
+        <select name="Mode of Payment" required value=""  selected id="mode-of-payment">
+        <option value="">Select Mode Of Payment</option>
+        </select>
+        <br><br>
+    </div>
+</div>
+
+
+
+        <div class="row col-lg-12 flex-row justify-content-center">
+            <div class="col-lg-5">
+            <label for="base-curve">Base Curve in (mm):</label>
+            <input type="text" id="base-curve" readonly>
+            <br><br>
+            </div>
+            <div class="col-lg-5">
+            <label for="diameter">Diameter:</label>
+            <input type="text" id="diameter" readonly>
+            <br><br>
+            </div>
+            <div class="col-lg-5">
+            <!-- <label for="packaging">Packaging:</label>
+            <input type="text" id="packaging" readonly>
+            <br><br> -->
+            <label for="packaging">Packaging</label>
+        <select name="Packaging" required value=""  selected id="packaging">
+        <option value="">Select Packaging</option>
+        </select>
+            </div>
+            <div class="col-lg-5">
+            <label for="modality">Modality:</label>
+            <input type="text" id="modality" readonly>
+            <br><br>
+            </div>
+        </div>
+    </div>
+        <div class="col-lg-10 mx-5">
+            <div class="col-lg-5">
+            <label for="Solution">OFPM Solution (300ml):</label><br>
+            <input type="checkbox" id="checkbox2" value="Solution Required" required>
+            <input name="Solution Quantity" type="number" min="0" value="0" max="99"  id="input-field2" disabled>
+            <br><br>
+            </div>
+        </div>
+            
+            
+            <button type="submit" class="btn col-lg-3 btn-primary">Submit</button>
+    </form>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxdur3JsfAyXe8tLMtGiPhkVn_tw24bBseIcYv4s0FDqr8HhMV_oNU00w0zWWLCjs4/exec'
+        const form = document.forms['submit-to-google-sheet']
+        
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          toricBlock.style="display:none !important";
+          formblock.style="display:block !important";
+
+          if (confirm("Are you sure you want to submit the form?")) {
+    
+            alert("Order Successfull!")
+  }
+  else{
+    return false;
+}
+  
+          
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+            form.reset();
+        })
+      </script>
+      
+      <script>
+       
+
+
+      </script>
+      
+
+
+</body>
+</html>
+
+
+

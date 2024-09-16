@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+select {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+h1{
+    text-align: center;
+}
+#checkbox{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    
+}
+#input-field{
+    width: 150px;
+}
+button{
+    width: 200px;
+    text-align: center;
+}
+#Left-Eye input{
+    width: 80px;
+    height: 30px;
+}
+#Right-Eye input{
+    width: 80px;
+    height: 30px;
+}
+/* #toric div{
+    display: flex;
+    flex-direction: row;
+} */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    /* border: 1px solid black; */
+  }
+  
+  td, th {
+    border: 2px solid black !important;
+    text-align: left;
+    padding: 8px;
+  }
+  #only-Solution{
+    color: white;
+    background-color: #2b3991;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    transition: 0.5s;
+  }
+  #only-Solution:hover{
+    /* background-color: #2b3991; */
+    transition: 0.5s;
+    box-shadow: 1px 1px 10px 2px #2b3991;
+  }
+  input{
+    background-color: #eee;
+    /* height: 40px; */
+    /* width: 200px; */
+    border: none;
+    border-radius: 5px;
+    /* color: green; */
+    /* padding-left: 20px; */
+    /* cursor: pointer; */
+  }
+  input[type="date"]{
+    padding-left: 20px;
+    cursor: pointer;
+    min-width: 100px;
+  }
+  input:disabled{
+    cursor: not-allowed;
+  }
+  select:disabled{
+    cursor: not-allowed;
+  }
+  select{
+    cursor: pointer;
+    background-color: #eee;
+    /* height: 40px; */
+    /* width: 200px; */
+    border: 0.5 solid #ccc;
+    border-radius: 5px;
+  }
+  input[type="checkbox"]{
+    background-color: green;
+    width: 15px;
+    height: 15px;
+  }
+ input[type="number"]{
+    border: 1px solid #aaa;
+    width: 100px;
+    height: 50px;
+    padding-left: 10px;
+ }
+ #input-field1:after{
+  content: "Box";
+ }
+ table{
+    overflow-x: scroll;
+ }
+ label:after { content:" *";
+   color: red; }
+
+  #toric-block{
+    border: 2px solid black;
+  }
+  
+  
